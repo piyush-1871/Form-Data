@@ -31,11 +31,14 @@ function Form() {
 
     function handleSubmit(event){
         event.preventDefault();
-        console.log("Final Data is:", formData);
+        alert("Check the console");
+        console.log("User Data is:", formData);
     }
 
   return (
     <div className="w-full mx-auto shadow p-8 md:max-w-[50%]">
+    <h2 className="text-4xl text-center mb-4 underline text-blue-600 font-bold ">User Info</h2>
+    
       <form onSubmit={handleSubmit} className="space-y-2">
         <label
           htmlFor="firstName"
@@ -296,14 +299,17 @@ function Form() {
           </div>
 
           <div className="my-3">
+          
             <button
               type="submit"
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
             >
               Save
             </button>
+            <h1 className="text-lg font-serif text-blue-600 underline font-bold mt-4">Note: Check the console after submitting the form!</h1>
           </div>
         </div>
+        
       </form>
     </div>
   );
